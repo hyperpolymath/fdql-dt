@@ -1,9 +1,11 @@
-# FQLdt: Dependently-Typed Form Query Language
+# FQLdt: Dependently-Typed FormDB Query Language
 
 **Status**: Research Prototype
 **License**: MPL-2.0
 
 FQLdt extends [FormDB](https://github.com/hyperpolymath/formdb)'s query language with **dependent types**, enabling compile-time verification of database constraints, provenance tracking, and reversibility proofs.
+
+> **Note**: FQL stands for "FormDB Query Language"—the native query interface for FormDB. It is not related to HTML forms or form builders.
 
 ## Relationship to FormDB
 
