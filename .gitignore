@@ -1,0 +1,12 @@
+# Lean 4 build artifacts
+.lake/
+build/
+
+# Editor files
+*.olean
+*.ilean
+*.trace
+
+# OS files
+.DS_Store
+*~

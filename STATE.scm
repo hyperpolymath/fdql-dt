@@ -152,6 +152,23 @@
         (description "Mock Forth core for MVP, or wire to real Form.Bridge?")
         (recommendation "Mock for MVP, real integration in 1.1"))))
 
+  (formdb-alignment
+    (formdb-version "0.0.4")
+    (alignment-date "2026-01-12")
+    (status "spec-aligned")
+    (compatible-features
+      "FFI via CBOR-encoded proof blobs (Form.Bridge)"
+      "NormalizationStep type (FunDep.lean)"
+      "Three-phase migration (Announce/Shadow/Commit)"
+      "Proof verification API")
+    (integration-points
+      (formdb-fundep "FormDB's FunDep.lean uses String-based attrs - upgrade to schema-bound")
+      (formdb-normalizer "FormDB's fd-discovery.factor aligns with DFD algorithm spec")
+      (formdb-bridge "bridge.zig exports fdb_verify_proof compatible with spec"))
+    (when-fdql-dt-implements
+      "FormDB should import fdql-dt types for FunDep, NormalForm predicates"
+      "Proofs.lean should use fdql-dt's LosslessTransform theorem")))
+
   (critical-next-actions
     (immediate
       (action "Create lakefile.lean with basic project structure")
